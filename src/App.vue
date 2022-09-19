@@ -35,7 +35,7 @@
             </li>
         </nav>
         <button
-            class="w-full 2xl:h-14 lg:w-72 2xl:w-80 py-3 2xl:py-5 2xl:px-7 mt-14 lg:mt-0 2xl:mt-0 uppercase text-dark font-bold bg-primary"
+            class="flex items-center justify-center w-full 2xl:h-14 lg:w-72 2xl:w-80 py-3 2xl:py-5 2xl:px-7 mt-14 lg:mt-0 2xl:mt-0 uppercase text-dark font-bold bg-primary"
         >
             Ver disponibilidade
         </button>

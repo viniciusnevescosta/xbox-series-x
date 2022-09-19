@@ -6,7 +6,7 @@
     >
         <img
             class="h-5 lg:h-6 2xl:h-11"
-            src="src/assets/logo-xbox.png"
+            src="/logo-xbox.png"
             alt="Logo Xbox"
             draggable="false"
         />
@@ -61,11 +61,11 @@
             <div class="relative flex items-end justify-center mt-1">
                 <img
                     class="absolute"
-                    src="src/assets/xbox.png"
+                    src="/xbox.png"
                     alt="xbox series x"
                     draggable="false"
                 />
-                <img src="src/assets/luz-verde.png" alt="" draggable="false" />
+                <img src="/luz-verde.png" alt="" draggable="false" />
             </div>
         </section>
         <section
@@ -92,7 +92,7 @@
             </div>
             <img
                 class="w-52 lg:w-80 2xl:w-96 mt-12"
-                src="src/assets/controle-xbox.png"
+                src="/controle-xbox.png"
                 alt="Controle Xbox"
             />
         </section>
@@ -101,19 +101,19 @@
         >
             <img
                 class="visible"
-                src="src/assets/farcry.png"
+                src="/farcry.png"
                 alt="Game: Far Cry 6"
                 draggable="false"
             />
             <img
                 class="visible"
-                src="src/assets/forza.png"
+                src="/forza.png"
                 alt="Game: Forza Horizon 5"
                 draggable="false"
             />
-            <img src="src/assets/fifa.png" alt="Game: FIFA" draggable="false" />
+            <img src="/fifa.png" alt="Game: FIFA" draggable="false" />
             <img
-                src="src/assets/minecraft.png"
+                src="/minecraft.png"
                 alt="Game: Minecraft Dungeons"
                 draggable="false"
             />
@@ -181,7 +181,7 @@
         >
             <img
                 class="h-6 2xl:h-11"
-                src="src/assets/logo-xbox.png"
+                src="/logo-xbox.png"
                 alt="Logo Xbox"
                 draggable="false"
             />

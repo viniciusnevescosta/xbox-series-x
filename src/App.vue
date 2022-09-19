@@ -73,12 +73,12 @@
         >
             <div class="flex flex-col w-2/4">
                 <h2
-                    class="text-primary text-2xl lg:text-4xl 2xl:text-6xl font-semibold"
+                    class="text-center lg:text-start 2xl:text-start text-primary text-2xl lg:text-4xl 2xl:text-6xl font-semibold"
                 >
                     Desempenho
                 </h2>
                 <h2
-                    class="text-light text-2xl lg:text-4xl 2xl:text-6xl font-semibold"
+                    class="text-center lg:text-start 2xl:text-start text-light text-2xl lg:text-4xl 2xl:text-6xl font-semibold"
                 >
                     aperfeiçoado
                 </h2>

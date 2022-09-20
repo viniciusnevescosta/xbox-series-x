@@ -69,7 +69,6 @@
                     src="/xbox.avif"
                     alt="xbox series x"
                     draggable="false"
-                    loading="lazy"
                 />
                 <img
                     class="hidden lg:block 2xl:block"

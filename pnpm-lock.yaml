@@ -2990,6 +2990,10 @@ packages:
       - supports-color
     dev: true
 
+  /vue-lazy-hydration/2.0.0-beta.4:
+    resolution: {integrity: sha512-bhr7AxzrSEPed4cOawIeCxJmR8pglberR78x1zs0886xR+47/EXE9s0Ezss90CPINo8ApzUfA/r+SbNffn+t9w==}
+    dev: false
+
   /vue/3.2.39:
     resolution: {integrity: sha512-tRkguhRTw9NmIPXhzk21YFBqXHT2t+6C6wPOgQ50fcFVWnPdetmRqbmySRHznrYjX2E47u0cGlKGcxKZJ38R/g==}
     dependencies:

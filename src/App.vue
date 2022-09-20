@@ -6,9 +6,10 @@
     >
         <img
             class="h-5 lg:h-6 2xl:h-11"
-            src="/logo-xbox.png"
+            src="/logo-xbox.avif"
             alt="Logo Xbox"
             draggable="false"
+            loading="lazy"
         />
         <nav
             class="flex w-full mt-7 lg:mt-0 2xl:mt-0 justify-between lg:justify-center 2xl:justify-center lg:gap-6 2xl:gap-12"
@@ -58,15 +59,25 @@
                     pedido antecipado
                 </h2>
             </div>
-            <div class="relative flex items-end justify-center mt-1">
+            <LazyHydrationWrapper
+                class="relative flex items-end justify-center mt-1"
+                :when-visible="{ rootMargin: '50px' }"
+                @hydrated="onHydrated"
+            >
                 <img
                     class="headline absolute"
-                    src="/xbox.png"
+                    src="/xbox.avif"
                     alt="xbox series x"
                     draggable="false"
+                    loading="lazy"
                 />
-                <img src="/luz-verde.png" alt="" draggable="false" />
-            </div>
+                <img
+                    src="/luz-verde.avif"
+                    alt=""
+                    draggable="false"
+                    loading="lazy"
+                />
+            </LazyHydrationWrapper>
         </section>
         <section
             class="flex flex-col lg:flex-row 2xl:flex-row items-center lg:justify-between 2xl:justify-between mt-14 lg:mt-64 2xl:mt-72 lg:px-40 lg:gap-5 2xl:gap-10"
@@ -92,25 +103,42 @@
             </div>
             <img
                 class="w-52 lg:w-80 2xl:w-96 mt-12"
-                src="/controle-xbox.png"
+                src="/controle-xbox.avif"
                 alt="Controle Xbox"
+                loading="lazy"
             />
         </section>
-        <section
-            class="flex flex-col lg:flex-row 2xl:flex-row mt-24 lg:mt-40 2xl:mt-80 gap-10 lg:gap-0 2xl:gap-0 lg:overflow-x-hidden 2xl:overflow-x-hidden"
-        >
-            <img src="/farcry.png" alt="Game: Far Cry 6" draggable="false" />
-            <img
-                src="/forza.png"
-                alt="Game: Forza Horizon 5"
-                draggable="false"
-            />
-            <img src="/fifa.png" alt="Game: FIFA" draggable="false" />
-            <img
-                src="/minecraft.png"
-                alt="Game: Minecraft Dungeons"
-                draggable="false"
-            />
+        <section>
+            <LazyHydrationWrapper
+                class="flex flex-col lg:flex-row 2xl:flex-row mt-24 lg:mt-40 2xl:mt-80 gap-10 lg:gap-0 2xl:gap-0 lg:overflow-x-hidden 2xl:overflow-x-hidden"
+                :when-visible="{ rootMargin: '50px' }"
+                @hydrated="onHydrated"
+            >
+                <img
+                    src="/farcry.avif"
+                    alt="Game: Far Cry 6"
+                    draggable="false"
+                    loading="lazy"
+                />
+                <img
+                    src="/forza.avif"
+                    alt="Game: Forza Horizon 5"
+                    draggable="false"
+                    loading="lazy"
+                />
+                <img
+                    src="/fifa.avif"
+                    alt="Game: FIFA"
+                    draggable="false"
+                    loading="lazy"
+                />
+                <img
+                    src="/minecraft.avif"
+                    alt="Game: Minecraft Dungeons"
+                    draggable="false"
+                    loading="lazy"
+                />
+            </LazyHydrationWrapper>
         </section>
         <section
             class="flex flex-col w-full mt-10 2xl:mt-64 lg:px-40 2xl:px-80"
@@ -175,9 +203,10 @@
         >
             <img
                 class="h-6 2xl:h-11"
-                src="/logo-xbox.png"
+                src="/logo-xbox.avif"
                 alt="Logo Xbox"
                 draggable="false"
+                loading="lazy"
             />
             <div
                 class="flex flex-col w-full 2xl:flex-row items-end 2xl:items-center 2xl:justify-end 2xl:gap-14"

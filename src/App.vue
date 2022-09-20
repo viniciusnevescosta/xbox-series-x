@@ -48,19 +48,19 @@
                 class="lg:absolute 2xl:absolute lg:top-16 2xl:top-32 flex flex-col items-center gap-3 lg:gap-6 2xl:gap-12"
             >
                 <h1
-                    class="text-light text-4xl lg:text-5xl 2xl:text-7xl font-semibold"
+                    class="headline text-light text-4xl lg:text-5xl 2xl:text-7xl font-semibold"
                 >
                     Xbox series X
                 </h1>
                 <h2
-                    class="uppercase text-primary lg:text-xl 2xl:text-2xl font-bold"
+                    class="headline uppercase text-primary lg:text-xl 2xl:text-2xl font-bold"
                 >
                     pedido antecipado
                 </h2>
             </div>
             <div class="relative flex items-end justify-center mt-1">
                 <img
-                    class="absolute"
+                    class="headline absolute"
                     src="/xbox.png"
                     alt="xbox series x"
                     draggable="false"
@@ -99,14 +99,8 @@
         <section
             class="flex flex-col lg:flex-row 2xl:flex-row mt-24 lg:mt-40 2xl:mt-80 gap-10 lg:gap-0 2xl:gap-0 lg:overflow-x-hidden 2xl:overflow-x-hidden"
         >
+            <img src="/farcry.png" alt="Game: Far Cry 6" draggable="false" />
             <img
-                class="visible"
-                src="/farcry.png"
-                alt="Game: Far Cry 6"
-                draggable="false"
-            />
-            <img
-                class="visible"
                 src="/forza.png"
                 alt="Game: Forza Horizon 5"
                 draggable="false"

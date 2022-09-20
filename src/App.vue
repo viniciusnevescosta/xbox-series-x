@@ -65,13 +65,14 @@
                 @hydrated="onHydrated"
             >
                 <img
-                    class="headline absolute"
+                    class="headline lg:absolute 2xl:absolute"
                     src="/xbox.avif"
                     alt="xbox series x"
                     draggable="false"
                     loading="lazy"
                 />
                 <img
+                    class="hidden lg:block 2xl:block"
                     src="/luz-verde.avif"
                     alt=""
                     draggable="false"

@@ -4,15 +4,15 @@ import App from './App.vue'
 
 createApp(App).mount('#app')
 
-import { createSSRApp } from 'vue'
-import { LazyHydrationWrapper } from 'vue3-lazy-hydration'
-const app = createSSRApp({})
+// import { createSSRApp } from 'vue'
+// import { LazyHydrationWrapper } from 'vue3-lazy-hydration'
+// const app = createSSRApp({})
 
-app.component(
-    // custom registered name
-    'LazyHydrate',
-    LazyHydrationWrapper
-)
+// app.component(
+//     // custom registered name
+//     'LazyHydrate',
+//     LazyHydrationWrapper
+// )
 
 // scrollreveal
 import ScrollReveal from 'scrollreveal'

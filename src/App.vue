@@ -1,4 +1,33 @@
-<script setup></script>
+<script setup>
+import QuestionBox from './components/QuestionBox.vue'
+
+import { ref } from 'vue'
+const questions = ref([
+    {
+        id: 0,
+        actived: false,
+        question:
+            'Meus jogos anteriores do Xbox vão funcionar no Xbox Series X?',
+        answer: 'A Compatibilidade com Versões Anteriores do Xbox Series X|S é gratuita e permite que você jogue alguns jogos do Xbox 360, jogos do Xbox Original e jogos do Xbox One que você já possui no Xbox Series X|S.'
+    },
+    {
+        id: 1,
+        actived: false,
+        question: 'O que está incluído no Xbox Series X?',
+        answer: 'Com o Xbox Series X, um console Xbox Series X, controle, cabo HDMI de alta velocidade e cabo de alimentação estão inclusos. Você pode adicionar compras autônomas do Xbox Game Pass e da Placa de expansão de armazenamento Seagate para Xbox Series X|S para ter a experiência completa.'
+    },
+    {
+        id: 2,
+        actived: false,
+        question: 'Como sei se minha TV é compatível com 4K?',
+        answer: 'A resolução do display deve ser: 3840 x 2160 pixels. A proporção deve ser de: 16:9 ou mais ampla, por fim, é preciso ter, pelo menos, uma entrada HDMI 2.1 (que suporta reprodução em 4K)'
+    }
+])
+
+function toggleQuestion(id) {
+    questions.value[id].actived = !questions.value[id].actived
+}
+</script>
 
 <template>
     <header
@@ -157,45 +186,14 @@
             </div>
             <!-- common questions -->
             <div class="flex flex-col mt-5 lg:mt-7 2xl:mt-14">
-                <div class="mt-5 flex flex-col">
-                    <div class="flex items-center justify-between">
-                        <p
-                            class="text-sm lg:text-lg 2xl:text-2xl text-light font-medium"
-                        >
-                            Meus jogos anteriores do Xbox vão funcionar no Xbox
-                            Series X?
-                        </p>
-                        <i class="ri-arrow-up-s-line ri-2x text-primary"></i>
-                    </div>
-                    <p
-                        class="mt-4 pl-3 text-sm lg:text-lg 2xl:text-lg text-grayLight font-medium"
-                    >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                    <hr class="mt-5 border border-gray" />
-                </div>
-                <div class="mt-5 flex flex-col">
-                    <div class="flex items-center justify-between">
-                        <p
-                            class="text-sm lg:text-lg 2xl:text-2xl text-light font-medium"
-                        >
-                            O que está incluído no Xbox Series X?
-                        </p>
-                        <i class="ri-arrow-down-s-line ri-2x text-gray"></i>
-                    </div>
-                    <hr class="mt-5 border border-gray" />
-                </div>
-                <div class="mt-5 flex flex-col">
-                    <div class="flex items-center justify-between">
-                        <p
-                            class="text-sm lg:text-lg 2xl:text-2xl text-light font-medium"
-                        >
-                            Como sei se minha TV é compatível com 4K?
-                        </p>
-                        <i class="ri-arrow-down-s-line ri-2x text-gray"></i>
-                    </div>
-                    <hr class="mt-5 border border-gray" />
-                </div>
+                <QuestionBox
+                    v-for="items in questions"
+                    :key="items.id"
+                    :actived="items.actived"
+                    :question="items.question"
+                    :answer="items.answer"
+                    @toggle-question="toggleQuestion(items.id)"
+                />
             </div>
         </section>
         <footer

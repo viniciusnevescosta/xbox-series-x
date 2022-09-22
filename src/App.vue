@@ -53,7 +53,7 @@ function toggleQuestion(id) {
             draggable="false"
             loading="lazy"
         />
-        <nav
+        <ul
             class="flex w-full mt-7 lg:mt-0 2xl:mt-0 justify-between lg:justify-center 2xl:justify-center lg:gap-6 2xl:gap-12"
         >
             <li
@@ -76,7 +76,7 @@ function toggleQuestion(id) {
             >
                 Unbox
             </li>
-        </nav>
+        </ul>
         <button
             class="flex items-center justify-center w-full 2xl:h-14 lg:w-72 2xl:w-80 py-3 2xl:py-5 2xl:px-7 mt-14 lg:mt-0 2xl:mt-0 uppercase text-dark font-bold bg-primary"
         >
@@ -109,7 +109,7 @@ function toggleQuestion(id) {
                     draggable="false"
                 />
                 <img
-                    class="hidden lg:block 2xl:block"
+                    class="hidden w-full lg:block 2xl:block"
                     src="/luz-verde.avif"
                     alt=""
                     draggable="false"

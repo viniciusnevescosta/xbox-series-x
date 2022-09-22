@@ -1,7 +1,20 @@
 <script setup>
+import { ref } from 'vue'
+import { createSSRApp } from 'vue'
+import { LazyHydrationWrapper } from 'vue3-lazy-hydration'
+import { useLazyHydration } from 'vue3-lazy-hydration'
 import QuestionBox from './components/QuestionBox.vue'
 
-import { ref } from 'vue'
+const app = createSSRApp({})
+app.component(
+    // custom registered name
+    'LazyHydrate',
+    LazyHydrationWrapper,
+    {
+        props: useLazyHydration
+    }
+)
+
 const questions = ref([
     {
         id: 0,
@@ -88,11 +101,7 @@ function toggleQuestion(id) {
                     pedido antecipado
                 </h2>
             </div>
-            <LazyHydrationWrapper
-                class="relative flex items-end justify-center mt-1"
-                :when-visible="{ rootMargin: '50px' }"
-                @hydrated="onHydrated"
-            >
+            <div class="relative flex items-end justify-center mt-1">
                 <img
                     class="headline lg:absolute 2xl:absolute"
                     src="/xbox.avif"
@@ -106,42 +115,47 @@ function toggleQuestion(id) {
                     draggable="false"
                     loading="lazy"
                 />
-            </LazyHydrationWrapper>
-        </section>
-        <section
-            class="flex flex-col lg:flex-row 2xl:flex-row items-center lg:justify-between 2xl:justify-between mt-14 lg:mt-64 2xl:mt-72 lg:px-40 lg:gap-5 2xl:gap-10"
-        >
-            <div class="flex flex-col w-2/4">
-                <h2
-                    class="text-center lg:text-start 2xl:text-start text-primary text-2xl lg:text-4xl 2xl:text-6xl font-semibold"
-                >
-                    Desempenho
-                </h2>
-                <h2
-                    class="text-center lg:text-start 2xl:text-start text-light text-2xl lg:text-4xl 2xl:text-6xl font-semibold"
-                >
-                    aperfeiçoado
-                </h2>
-                <p
-                    class="mt-6 text-center lg:text-left 2xl:text-left text-grayLight lg:text-lg 2xl:text-xl font-medium"
-                >
-                    O controle sem fio Xbox traz um design elegante, conforto
-                    refinado e compartilhamento instantâneo para um favorito
-                    comum.
-                </p>
             </div>
-            <img
-                class="w-52 lg:w-80 2xl:w-96 mt-12"
-                src="/controle-xbox.avif"
-                alt="Controle Xbox"
-                loading="lazy"
-            />
         </section>
         <section>
-            <LazyHydrationWrapper
-                class="flex flex-col lg:flex-row 2xl:flex-row mt-24 lg:mt-40 2xl:mt-80 gap-10 lg:gap-0 2xl:gap-0 lg:overflow-x-hidden 2xl:overflow-x-hidden"
+            <LazyHydrate
+                class="flex flex-col lg:flex-row 2xl:flex-row items-center lg:justify-between 2xl:justify-between mt-14 lg:mt-64 2xl:mt-72 lg:px-40 lg:gap-5 2xl:gap-10"
                 :when-visible="{ rootMargin: '50px' }"
                 @hydrated="onHydrated"
+            >
+                <div class="flex flex-col w-2/4">
+                    <h2
+                        class="text-center lg:text-start 2xl:text-start text-primary text-2xl lg:text-4xl 2xl:text-6xl font-semibold"
+                    >
+                        Desempenho
+                    </h2>
+                    <h2
+                        class="text-center lg:text-start 2xl:text-start text-light text-2xl lg:text-4xl 2xl:text-6xl font-semibold"
+                    >
+                        aperfeiçoado
+                    </h2>
+                    <p
+                        class="mt-6 text-center lg:text-left 2xl:text-left text-grayLight lg:text-lg 2xl:text-xl font-medium"
+                    >
+                        O controle sem fio Xbox traz um design elegante,
+                        conforto refinado e compartilhamento instantâneo para um
+                        favorito comum.
+                    </p>
+                </div>
+                <img
+                    class="w-52 lg:w-80 2xl:w-96 mt-12"
+                    src="/controle-xbox.avif"
+                    alt="Controle Xbox"
+                    loading="lazy"
+                />
+            </LazyHydrate>
+        </section>
+        <LazyHydrate
+            :when-visible="{ rootMargin: '50px' }"
+            @hydrated="onHydrated"
+        >
+            <section
+                class="flex flex-col lg:flex-row 2xl:flex-row mt-24 lg:mt-40 2xl:mt-80 gap-10 lg:gap-0 2xl:gap-0 lg:overflow-x-hidden 2xl:overflow-x-hidden"
             >
                 <img
                     src="/farcry.avif"
@@ -167,35 +181,41 @@ function toggleQuestion(id) {
                     draggable="false"
                     loading="lazy"
                 />
-            </LazyHydrationWrapper>
-        </section>
-        <section
-            class="flex flex-col w-full mt-10 2xl:mt-64 lg:px-40 2xl:px-80"
+            </section>
+        </LazyHydrate>
+
+        <LazyHydrate
+            class="w-full"
+            :when-visible="{ rootMargin: '50px' }"
+            @hydrated="onHydrated"
         >
-            <div class="flex flex-row gap-2">
-                <h2
-                    class="text-primary text-2xl lg:text-3xl 2xl:text-5xl font-semibold"
-                >
-                    Perguntas
-                </h2>
-                <h2
-                    class="text-light text-2xl lg:text-3xl 2xl:text-5xl font-semibold"
-                >
-                    frequentes
-                </h2>
-            </div>
-            <!-- common questions -->
-            <div class="flex flex-col mt-5 lg:mt-7 2xl:mt-14">
-                <QuestionBox
-                    v-for="items in questions"
-                    :key="items.id"
-                    :actived="items.actived"
-                    :question="items.question"
-                    :answer="items.answer"
-                    @toggle-question="toggleQuestion(items.id)"
-                />
-            </div>
-        </section>
+            <section
+                class="flex flex-col w-full mt-10 2xl:mt-64 lg:px-40 2xl:px-80"
+            >
+                <div class="flex flex-row gap-2">
+                    <h2
+                        class="text-primary text-2xl lg:text-3xl 2xl:text-5xl font-semibold"
+                    >
+                        Perguntas
+                    </h2>
+                    <h2
+                        class="text-light text-2xl lg:text-3xl 2xl:text-5xl font-semibold"
+                    >
+                        frequentes
+                    </h2>
+                </div>
+                <div class="flex flex-col mt-5 lg:mt-7 2xl:mt-14">
+                    <QuestionBox
+                        v-for="items in questions"
+                        :key="items.id"
+                        :actived="items.actived"
+                        :question="items.question"
+                        :answer="items.answer"
+                        @toggle-question="toggleQuestion(items.id)"
+                    />
+                </div>
+            </section>
+        </LazyHydrate>
         <footer
             class="flex flex-row w-full mt-12 lg:mt-24 2xl:mt-48 lg:mb-10 2xl:mb-20 lg:px-40 2xl:px-80"
         >

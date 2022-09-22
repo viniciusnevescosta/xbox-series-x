@@ -91,19 +91,19 @@ function toggleQuestion(id) {
                 class="lg:absolute 2xl:absolute lg:top-16 2xl:top-32 flex flex-col items-center gap-3 lg:gap-6 2xl:gap-12"
             >
                 <h1
-                    class="headline text-light text-4xl lg:text-5xl 2xl:text-7xl font-semibold"
+                    class="text-light text-4xl lg:text-5xl 2xl:text-7xl font-semibold"
                 >
                     Xbox series X
                 </h1>
                 <h2
-                    class="headline uppercase text-primary lg:text-xl 2xl:text-2xl font-bold"
+                    class="uppercase text-primary lg:text-xl 2xl:text-2xl font-bold"
                 >
                     pedido antecipado
                 </h2>
             </div>
             <div class="relative flex items-end justify-center mt-1">
                 <img
-                    class="headline lg:absolute 2xl:absolute"
+                    class="lg:absolute 2xl:absolute"
                     src="/xbox.avif"
                     alt="xbox series x"
                     draggable="false"

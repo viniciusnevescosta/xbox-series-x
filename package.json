@@ -9,9 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "scrollreveal": "^4.0.9",
-    "vue": "^3.2.37",
-    "vue3-lazy-hydration": "^1.1.3"
+    "@formkit/auto-animate": "1.0.0-beta.3",
+    "vue": "^3.2.37"
   },
   "devDependencies": {
     "@pnpm/eslint-config": "^1.0.1",

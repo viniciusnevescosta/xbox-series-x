@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@formkit/auto-animate': 1.0.0-beta.3
   '@pnpm/eslint-config': ^1.0.1
   '@vitejs/plugin-vue': ^3.1.0
   autoprefixer: ^10.4.11
@@ -10,18 +11,15 @@ specifiers:
   eslint-plugin-vue: ^9.5.1
   postcss: ^8.4.16
   prettier: ^2.7.1
-  scrollreveal: ^4.0.9
   stylelint: ^14.12.0
   stylelint-config-standard: ^28.0.0
   tailwindcss: ^3.1.8
   vite: ^3.1.0
   vue: ^3.2.37
-  vue3-lazy-hydration: ^1.1.3
 
 dependencies:
-  scrollreveal: 4.0.9
+  '@formkit/auto-animate': 1.0.0-beta.3
   vue: 3.2.39
-  vue3-lazy-hydration: 1.1.3_vue@3.2.39
 
 devDependencies:
   '@pnpm/eslint-config': 1.0.1
@@ -126,6 +124,10 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@formkit/auto-animate/1.0.0-beta.3:
+    resolution: {integrity: sha512-glsi+ytwQpxT/Ctr9GtcIfVr4dO6mJ04mQbNU8MFSdCdqMopHtyfU5Fib0+9lNFIeR0luY4/0NW95/2R5pKsag==}
+    dev: false
 
   /@humanwhocodes/config-array/0.10.4:
     resolution: {integrity: sha512-mXAIHxZT3Vcpg83opl1wGlVZ9xydbfZO3r5YfRSH6Gpp2J/PfdBP0wbDa2sO6/qRbcalpoevVyW6A/fI6LfeMw==}
@@ -1839,16 +1841,6 @@ packages:
       has-tostringtag: 1.0.0
     dev: true
 
-  /is-dom-node-list/1.2.1:
-    resolution: {integrity: sha512-P1H071iT5TGG8pAHslhrLDo/tQLYc8tGuWABVqhGU4l2mm7aDNb9cx2myQ2AujEQO6B2cAujcW4a0/+6UfXInw==}
-    dependencies:
-      is-dom-node: 1.0.4
-    dev: false
-
-  /is-dom-node/1.0.4:
-    resolution: {integrity: sha512-NEnTHKCeyGJTL0cKdzATF8SWzyTMYf5CbNKWBvsXvyMxZG32g+a09qkeCbrfQNLTD85CbPeHb4YjIJCjyzF0yA==}
-    dev: false
-
   /is-extglob/2.1.1:
     resolution: {integrity: sha512-SbKbANkN603Vi4jEZv49LeVJMn4yGwsbzZworEoyEiutsN3nJYdbO36zfhGJ6QEDpOZIFkDtnq5JRxmvl3jsoQ==}
     engines: {node: '>=0.10.0'}
@@ -2101,10 +2093,6 @@ packages:
   /minimist/1.2.6:
     resolution: {integrity: sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==}
     dev: true
-
-  /miniraf/1.0.0:
-    resolution: {integrity: sha512-XpvhtJYzVrpXe+JoAthrT9E40NIrSDDMcdHEYL2M+lR/OCas0nadetcBBq/MWYqlgV5aDWVQ3mfAqd+fG6Y/EQ==}
-    dev: false
 
   /ms/2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}
@@ -2477,10 +2465,6 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /rematrix/0.3.0:
-    resolution: {integrity: sha512-xB/9ZvJIKaDgXX0qkvV9/pLD8zK23A6TVV6F8Vhsl+SrxbBeVYutz5uszxgC6Rt3RP9LZiH8OXaYjr+x6WXWmQ==}
-    dev: false
-
   /require-from-string/2.0.2:
     resolution: {integrity: sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==}
     engines: {node: '>=0.10.0'}
@@ -2530,15 +2514,6 @@ packages:
     dependencies:
       queue-microtask: 1.2.3
     dev: true
-
-  /scrollreveal/4.0.9:
-    resolution: {integrity: sha512-fefGvzVS8YbXbDK1+T0kvy2yqxaiBJZeGUhPeqajf+7sGqtX4xikbKGAlzQuPCpswAMswx94ZwhDjXKnRIqW1w==}
-    requiresBuild: true
-    dependencies:
-      miniraf: 1.0.0
-      rematrix: 0.3.0
-      tealight: 0.3.6
-    dev: false
 
   /semver/5.7.1:
     resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
@@ -2821,13 +2796,6 @@ packages:
       - ts-node
     dev: true
 
-  /tealight/0.3.6:
-    resolution: {integrity: sha512-Dys3N8jFBThD9pNVpPCyUiu6DfWcTBdqWQJIvnAuVaFkGEdrPBJ43070vVbn6sTlLvn2IQK2zFW4FrVIrTo8eQ==}
-    dependencies:
-      is-dom-node: 1.0.4
-      is-dom-node-list: 1.2.1
-    dev: false
-
   /text-table/0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
     dev: true
@@ -2990,10 +2958,6 @@ packages:
       - supports-color
     dev: true
 
-  /vue-lazy-hydration/2.0.0-beta.4:
-    resolution: {integrity: sha512-bhr7AxzrSEPed4cOawIeCxJmR8pglberR78x1zs0886xR+47/EXE9s0Ezss90CPINo8ApzUfA/r+SbNffn+t9w==}
-    dev: false
-
   /vue/3.2.39:
     resolution: {integrity: sha512-tRkguhRTw9NmIPXhzk21YFBqXHT2t+6C6wPOgQ50fcFVWnPdetmRqbmySRHznrYjX2E47u0cGlKGcxKZJ38R/g==}
     dependencies:
@@ -3002,14 +2966,6 @@ packages:
       '@vue/runtime-dom': 3.2.39
       '@vue/server-renderer': 3.2.39_vue@3.2.39
       '@vue/shared': 3.2.39
-
-  /vue3-lazy-hydration/1.1.3_vue@3.2.39:
-    resolution: {integrity: sha512-0MCO11Kpb8fhPUM4fRdK3KQnisB5ElE4fsnJxoy1Q2ykhMxh8F2bO5dEVK2d4Z/OhpJlpyl6DhLu114H+xxnAQ==}
-    peerDependencies:
-      vue: '>=3.0.0'
-    dependencies:
-      vue: 3.2.39
-    dev: false
 
   /which-boxed-primitive/1.0.2:
     resolution: {integrity: sha512-bwZdv0AKLpplFY2KZRX6TvyuN7ojjr7lwkg6ml0roIy9YeuSr7JS372qlNW18UQYzgYK9ziGcerWqZOmEn9VNg==}

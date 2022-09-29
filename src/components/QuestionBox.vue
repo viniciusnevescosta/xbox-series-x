@@ -23,7 +23,7 @@ function emitValue() {
 </script>
 
 <template>
-    <div class="mt-5 flex flex-col">
+    <div v-auto-animate class="mt-5 flex flex-col">
         <div class="flex items-center justify-between">
             <p class="text-sm lg:text-lg 2xl:text-2xl text-light font-medium">
                 {{ question }}
@@ -39,7 +39,7 @@ function emitValue() {
             ></i>
         </div>
         <p
-            :class="actived ? 'block' : 'hidden'"
+            v-if="actived"
             class="mt-4 pl-3 text-sm lg:text-lg 2xl:text-lg text-grayLight font-medium"
         >
             {{ answer }}

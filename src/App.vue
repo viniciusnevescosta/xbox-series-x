@@ -1,19 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { createSSRApp } from 'vue'
-import { LazyHydrationWrapper } from 'vue3-lazy-hydration'
-import { useLazyHydration } from 'vue3-lazy-hydration'
 import QuestionBox from './components/QuestionBox.vue'
-
-const app = createSSRApp({})
-app.component(
-    // custom registered name
-    'LazyHydrate',
-    LazyHydrationWrapper,
-    {
-        props: useLazyHydration
-    }
-)
 
 const questions = ref([
     {
@@ -91,25 +78,25 @@ function toggleQuestion(id) {
                 class="lg:absolute 2xl:absolute lg:top-16 2xl:top-32 flex flex-col items-center gap-3 lg:gap-6 2xl:gap-12"
             >
                 <h1
-                    class="text-light text-4xl lg:text-5xl 2xl:text-7xl font-semibold"
+                    class="opacity-0 transition-opacity duration-1000 motion-reduce:transition-none motion-reduce:hover:transform-none text-light text-4xl lg:text-5xl 2xl:text-7xl font-semibold"
                 >
                     Xbox series X
                 </h1>
                 <h2
-                    class="uppercase text-primary lg:text-xl 2xl:text-2xl font-bold"
+                    class="opacity-0 transition-opacity duration-1000 motion-reduce:transition-none motion-reduce:hover:transform-none uppercase text-primary lg:text-xl 2xl:text-2xl font-bold"
                 >
                     pedido antecipado
                 </h2>
             </div>
             <div class="relative flex items-end justify-center mt-1">
                 <img
-                    class="lg:absolute 2xl:absolute"
+                    class="opacity-0 transition-opacity duration-1000 motion-reduce:transition-none motion-reduce:hover:transform-none lg:absolute 2xl:absolute"
                     src="/xbox.avif"
                     alt="xbox series x"
                     draggable="false"
                 />
                 <img
-                    class="hidden w-full lg:block 2xl:block"
+                    class="w-full lg:block 2xl:block"
                     src="/luz-verde.avif"
                     alt=""
                     draggable="false"
@@ -118,24 +105,24 @@ function toggleQuestion(id) {
             </div>
         </section>
         <section>
-            <LazyHydrate
+            <LazyHydrationWrapper
                 class="flex flex-col lg:flex-row 2xl:flex-row items-center lg:justify-between 2xl:justify-between mt-14 lg:mt-64 2xl:mt-72 lg:px-40 lg:gap-5 2xl:gap-10"
-                :when-visible="{ rootMargin: '50px' }"
+                :when-idle="4000"
                 @hydrated="onHydrated"
             >
                 <div class="flex flex-col w-2/4">
                     <h2
-                        class="text-center lg:text-start 2xl:text-start text-primary text-2xl lg:text-4xl 2xl:text-6xl font-semibold"
+                        class="opacity-0 transition-opacity duration-1000 motion-reduce:transition-none motion-reduce:hover:transform-none text-center lg:text-start 2xl:text-start text-primary text-2xl lg:text-4xl 2xl:text-6xl font-semibold"
                     >
                         Desempenho
                     </h2>
                     <h2
-                        class="text-center lg:text-start 2xl:text-start text-light text-2xl lg:text-4xl 2xl:text-6xl font-semibold"
+                        class="opacity-0 transition-opacity duration-1000 motion-reduce:transition-none motion-reduce:hover:transform-none text-center lg:text-start 2xl:text-start text-light text-2xl lg:text-4xl 2xl:text-6xl font-semibold"
                     >
                         aperfeiçoado
                     </h2>
                     <p
-                        class="mt-6 text-center lg:text-left 2xl:text-left text-grayLight lg:text-lg 2xl:text-xl font-medium"
+                        class="opacity-0 transition-opacity duration-1000 motion-reduce:transition-none motion-reduce:hover:transform-none mt-6 text-center lg:text-left 2xl:text-left text-grayLight lg:text-lg 2xl:text-xl font-medium"
                     >
                         O controle sem fio Xbox traz um design elegante,
                         conforto refinado e compartilhamento instantâneo para um
@@ -143,50 +130,51 @@ function toggleQuestion(id) {
                     </p>
                 </div>
                 <img
-                    class="w-52 lg:w-80 2xl:w-96 mt-12"
+                    class="opacity-0 transition-opacity duration-1000 motion-reduce:transition-none motion-reduce:hover:transform-none w-52 lg:w-80 2xl:w-96 mt-12"
                     src="/controle-xbox.avif"
                     alt="Controle Xbox"
                     loading="lazy"
                 />
-            </LazyHydrate>
+            </LazyHydrationWrapper>
         </section>
-        <LazyHydrate
-            :when-visible="{ rootMargin: '50px' }"
-            @hydrated="onHydrated"
-        >
+        <LazyHydrationWrapper :when-idle="4000" @hydrated="onHydrated">
             <section
                 class="flex flex-col lg:flex-row 2xl:flex-row mt-24 lg:mt-40 2xl:mt-80 gap-10 lg:gap-0 2xl:gap-0 lg:overflow-x-hidden 2xl:overflow-x-hidden"
             >
                 <img
+                    class="opacity-0 transition-opacity duration-1000 motion-reduce:transition-none motion-reduce:hover:transform-none"
                     src="/farcry.avif"
                     alt="Game: Far Cry 6"
                     draggable="false"
                     loading="lazy"
                 />
                 <img
+                    class="opacity-0 transition-opacity duration-1000 motion-reduce:transition-none motion-reduce:hover:transform-none"
                     src="/forza.avif"
                     alt="Game: Forza Horizon 5"
                     draggable="false"
                     loading="lazy"
                 />
                 <img
+                    class="opacity-0 transition-opacity duration-1000 motion-reduce:transition-none motion-reduce:hover:transform-none"
                     src="/fifa.avif"
                     alt="Game: FIFA"
                     draggable="false"
                     loading="lazy"
                 />
                 <img
+                    class="opacity-0 transition-opacity duration-1000 motion-reduce:transition-none motion-reduce:hover:transform-none"
                     src="/minecraft.avif"
                     alt="Game: Minecraft Dungeons"
                     draggable="false"
                     loading="lazy"
                 />
             </section>
-        </LazyHydrate>
+        </LazyHydrationWrapper>
 
-        <LazyHydrate
+        <LazyHydrationWrapper
             class="w-full"
-            :when-visible="{ rootMargin: '50px' }"
+            :when-idle="4000"
             @hydrated="onHydrated"
         >
             <section
@@ -194,20 +182,25 @@ function toggleQuestion(id) {
             >
                 <div class="flex flex-row gap-2">
                     <h2
-                        class="text-primary text-2xl lg:text-3xl 2xl:text-5xl font-semibold"
+                        class="opacity-0 transition-opacity duration-1000 motion-reduce:transition-none motion-reduce:hover:transform-none text-primary text-2xl lg:text-3xl 2xl:text-5xl font-semibold"
                     >
                         Perguntas
                     </h2>
                     <h2
-                        class="text-light text-2xl lg:text-3xl 2xl:text-5xl font-semibold"
+                        class="opacity-0 transition-opacity duration-1000 motion-reduce:transition-none motion-reduce:hover:transform-none text-light text-2xl lg:text-3xl 2xl:text-5xl font-semibold"
                     >
                         frequentes
                     </h2>
                 </div>
-                <div class="flex flex-col mt-5 lg:mt-7 2xl:mt-14">
+                <div
+                    v-auto-animate
+                    class="flex flex-col mt-5 lg:mt-7 2xl:mt-14"
+                >
                     <QuestionBox
                         v-for="items in questions"
                         :key="items.id"
+                        v-auto-animate
+                        class="opacity-0 transition-opacity duration-1000 motion-reduce:transition-none motion-reduce:hover:transform-none"
                         :actived="items.actived"
                         :question="items.question"
                         :answer="items.answer"
@@ -215,7 +208,7 @@ function toggleQuestion(id) {
                     />
                 </div>
             </section>
-        </LazyHydrate>
+        </LazyHydrationWrapper>
         <footer
             class="flex flex-row w-full mt-12 lg:mt-24 2xl:mt-48 lg:mb-10 2xl:mb-20 lg:px-40 2xl:px-80"
         >

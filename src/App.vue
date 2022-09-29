@@ -105,10 +105,8 @@ function toggleQuestion(id) {
             </div>
         </section>
         <section>
-            <LazyHydrationWrapper
+            <div
                 class="flex flex-col lg:flex-row 2xl:flex-row items-center lg:justify-between 2xl:justify-between mt-14 lg:mt-64 2xl:mt-72 lg:px-40 lg:gap-5 2xl:gap-10"
-                :when-idle="4000"
-                @hydrated="onHydrated"
             >
                 <div class="flex flex-col w-2/4">
                     <h2
@@ -135,9 +133,9 @@ function toggleQuestion(id) {
                     alt="Controle Xbox"
                     loading="lazy"
                 />
-            </LazyHydrationWrapper>
+            </div>
         </section>
-        <LazyHydrationWrapper :when-idle="4000" @hydrated="onHydrated">
+        <div>
             <section
                 class="flex flex-col lg:flex-row 2xl:flex-row mt-24 lg:mt-40 2xl:mt-80 gap-10 lg:gap-0 2xl:gap-0 lg:overflow-x-hidden 2xl:overflow-x-hidden"
             >
@@ -170,13 +168,9 @@ function toggleQuestion(id) {
                     loading="lazy"
                 />
             </section>
-        </LazyHydrationWrapper>
+        </div>
 
-        <LazyHydrationWrapper
-            class="w-full"
-            :when-idle="4000"
-            @hydrated="onHydrated"
-        >
+        <div class="w-full">
             <section
                 class="flex flex-col w-full mt-10 2xl:mt-64 lg:px-40 2xl:px-80"
             >
@@ -208,7 +202,7 @@ function toggleQuestion(id) {
                     />
                 </div>
             </section>
-        </LazyHydrationWrapper>
+        </div>
         <footer
             class="flex flex-row w-full mt-12 lg:mt-24 2xl:mt-48 lg:mb-10 2xl:mb-20 lg:px-40 2xl:px-80"
         >
@@ -222,6 +216,14 @@ function toggleQuestion(id) {
             <div
                 class="flex flex-col w-full 2xl:flex-row items-end 2xl:items-center 2xl:justify-end 2xl:gap-14"
             >
+                <a
+                    class="text-sm 2xl:text-lg text-gray hover:text-grayLight"
+                    href="https://vinicius-costa-links.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Vinícius Neves Costa
+                </a>
                 <p class="text-sm 2xl:text-lg text-gray">© Microsoft 2022</p>
                 <p class="text-sm 2xl:text-lg text-gray">
                     Todos os direitos reservados

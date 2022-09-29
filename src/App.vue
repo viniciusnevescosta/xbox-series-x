@@ -96,9 +96,9 @@ function toggleQuestion(id) {
                     draggable="false"
                 />
                 <img
-                    class="w-full lg:block 2xl:block"
+                    class="hidden w-full lg:block 2xl:block"
                     src="/luz-verde.avif"
-                    alt=""
+                    alt="Luz verde"
                     draggable="false"
                     loading="lazy"
                 />

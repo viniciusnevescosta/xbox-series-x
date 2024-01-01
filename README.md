@@ -1,6 +1,17 @@
 # Xbox Series X
 
+![image](https://github.com/viniciusnevescosta/xbox-series-x/assets/66970818/9d2325cd-7ba0-40ba-80ca-482ad65426d0)
+
 Bem-vindo ao repositório do meu projeto "Xbox Series X Landing Page"! Aqui, desenvolvi uma página de destino com o tema do novo console da Microsoft, o Xbox Series X.
+
+- [Read in english](en_README.md)
+
+## Sumário de Conteúdos
+
+- [Visão Geral](#visão-geral)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Como Testar](#como-testar)
+- [Aprendizados Adquiridos](#aprendizados-adquiridos)
 
 ## Visão Geral
 
@@ -13,15 +24,21 @@ Este projeto é uma página de destino conceitual para o Xbox Series X. Com um d
   
 ## Como Testar
 
+### Deploy
+
+- [XBox Series X](https://desafio21-xbox.vercel.app/)
+
+### Localmente
+
 1. **Clone o Repositório:**
    ```bash
-   git clone https://github.com/viniciusnevescosta/concept-xbox-page.git
+   git clone https://github.com/viniciusnevescosta/xbox-series-x.git
    ```
 
 2. **Instale as Dependências:**
    ```bash
-   cd concept-xbox-page
-   npm install
+   cd xbox-serie-x
+   pnpm i
    ```
 
 3. **Execute o Aplicativo:**

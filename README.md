@@ -1,55 +1,44 @@
-# Clone: Xbox Series X Page
+# Xbox Series X
 
-This clone landing page shows important information of the Xbox Series X console, created for the purpose of learning and testing new technologies, it was made for other developers and students, as well as for recruiters to see development skills.
+Bem-vindo ao repositório do meu projeto "Xbox Series X Landing Page"! Aqui, desenvolvi uma página de destino com o tema do novo console da Microsoft, o Xbox Series X.
 
-## Screenshots
-<p align="center">
-  <img height="400em" src="public/cover.png"
-</p>
+## Visão Geral
 
+Este projeto é uma página de destino conceitual para o Xbox Series X. Com um design moderno e atraente, a página destaca as principais características e funcionalidades do console, proporcionando uma experiência envolvente para os visitantes.
 
-## Features
+## Tecnologias Utilizadas
 
-- Toggle frequently asked questions.
+- **VueJs:** Um framework JavaScript progressivo para a construção de interfaces de usuário interativas.
+- **SCSS:** Uma linguagem de folha de estilo que é compilada para o CSS.
+  
+## Como Testar
 
+1. **Clone o Repositório:**
+   ```bash
+   git clone https://github.com/viniciusnevescosta/concept-xbox-page.git
+   ```
 
-## Lessons Learned
+2. **Instale as Dependências:**
+   ```bash
+   cd concept-xbox-page
+   npm install
+   ```
 
-I learned how to use the package manager PNPM, I really liked the way it organizes only the necessary modules, decreasing the volume in node_modules. 
+3. **Execute o Aplicativo:**
+   ```bash
+   pnpm dev
+   ```
 
-For the first time I used a linter in my code, Eslint together with Prettier and Stylelint for Tailwindcss, I didn't get along at first with their strong opinion, but soon after I appreciated the fact that I didn't have to fix the syntax of the code manually.
+4. **Acesse a Página:**
+   - Navegue para `http://localhost:3030` e explore a página de destino do Xbox Series X.
 
-I think my biggest challenge in the project was integrating a Vue3 library. In this case [*vue3-lazy-hydration*](https://github.com/freddy38510/vue3-lazy-hydration). As the name implies, it is a lazy hydration library. I had problems importing it so I opened an [issue](https://github.com/freddy38510/vue3-lazy-hydration/issues/36) and thanks to [@freddy38510](https://github.com/freddy38510) and [@dsvgl](https://github.com/dsvgl), I was able to use it.
+## Aprendizados Adquiridos
 
+Durante o desenvolvimento deste projeto, adquiri conhecimentos valiosos, incluindo:
 
-## Optimizations
+- 🖌 Uso eficaz do VueJs para criar uma interface interativa e dinâmica.
+- 🎨 Estilização avançada com SCSS para criar um design moderno e responsivo.
 
-For the images I used the new *loading* parameters and set them to *lazy*. The goal is to improve performance by rendering only the visible images. [Read more](https://web.dev/i18n/pt/browser-level-image-lazy-loading/).
+---
 
-I also used the *vue3-lazy-hydration* library that uses the concept of lazy hydration with Vue3.
-
-
-## Deployment
-
-To build this project run:
-
-```bash
-  pnpm
-  pnpm build
-```
-
-Deploy: https://desafio21-xbox.vercel.app/
-
-## Acknowledgements
-
- - [Figma UI Challenge: Colelândia](https://www.figma.com/file/Yb9IBH56g7T1hdIyZ3BMNO/Desafios---Codel%C3%A2ndia)
- - [vue3-lazy-hydration](https://github.com/freddy38510/vue3-lazy-hydration)
- - [ScrollReveal](https://scrollrevealjs.org/)
-
-## Authors
-
-- [@Jolonte](https://github.com/Jolonte)
-
-## License
-
-[MIT](LICENSE)
+**Nota:** Este projeto foi arquivado pois representa um estudo concluído com sucesso. Não há planos de desenvolvimento adicional, pois seus objetivos foram alcançados com êxito.

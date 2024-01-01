@@ -24,9 +24,9 @@ Este projeto é uma página de destino conceitual para o Xbox Series X. Com um d
   
 ## Como Testar
 
-### Deploy
+### Online
 
-- [XBox Series X](https://desafio21-xbox.vercel.app/)
+- [Deploy](https://desafio21-xbox.vercel.app/)
 
 ### Localmente
 
